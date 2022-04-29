@@ -1,0 +1,16 @@
+/* Ajax tabs */
+.nav-tabs .active {
+    color: black !important;
+    }
+    .nav-tabs .nav-item button {
+        border-radius: 0 !important;
+        font-family: var(--head-font);
+        font-size: 18px !important;
+    }
+/* End ajax tabs */
+
+.tabel {
+    padding: 0 1rem;
+    border: 1px solid lightgray;
+}
+

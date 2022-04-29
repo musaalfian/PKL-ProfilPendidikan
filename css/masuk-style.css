@@ -1,0 +1,44 @@
+/* Login */
+.login__section {
+    background-image: url("bg-login.png");
+    background-color: rgb(221, 221, 221);
+    width: 100%;
+    padding: 98px 0;
+} 
+.login__content {
+    background-color: white;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 60px 0;
+}
+.ket h3 {
+    font-size: 16px !important;
+}
+.login__content .isi {
+    width: 50%;
+    margin: auto;
+}
+.nama input {
+    border-radius: 0 !important;
+    border-color: lightgray !important;
+}
+form button {
+    border-radius: 0 !important;
+}
+
+/* End login */
+/* End custom style */
+
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+
+}
+/* End responsive */

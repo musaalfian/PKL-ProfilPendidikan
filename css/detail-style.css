@@ -1,0 +1,38 @@
+/* Main */
+.item h3 {
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+.line {
+    border-bottom: 1px solid lightgray;
+}
+
+.button__detail button {
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 18px !important;
+    color: white !important;
+}
+
+.modal-dialog button {
+    font-size: 14px !important;
+}
+/* End main */
+
+/* End custom style */
+
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width: 768px)  {
+    .detail__content h3 {
+        font-size: 16px !important;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    
+}
+
+/* End responsive */

@@ -1,0 +1,220 @@
+/* Variable */
+:root {
+    /* color */
+    --white: rgba(255, 255, 255, 1);
+    --light: #F8F8FA;
+    --dark-blue: rgba(41, 69, 106, 1);
+    --blue: rgba(38, 151, 255, 1);
+    --red: rgba(243, 110, 110, 1);
+    --grey: #444A5D;
+
+    /* font */
+    --head-font: "Segoe UI", sans-serif;
+    --body-font: "Montserrat", sans-serif;
+
+    /* box shadow */
+    --shadow-color: 0 0 0 2px lightgray !important;
+
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.0);
+}
+/* End variable */
+
+/* Main style */
+* {
+    font-family: var(--head-font);
+    font-weight: 400 !important;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+/* End main style */
+
+/* Color */
+.grey {
+    color: var(--grey);
+}
+.darkblue {
+    color: var(--dark-blue);
+}
+/* End color */
+
+/* Background color */
+.bglight {
+    background-color: var(--light);
+}
+.bgdarkblue {
+    background-color: var(--dark-blue);
+}
+.bgblue {
+    background-color: var(--blue);
+}
+.bgred {
+    background-color: var(--red);
+}
+/* End background color */
+
+/* Font */
+.ff1 {
+    font-family: var(--head-font);
+}
+.ff2 {
+    font-family: var(--body-font);
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+/* End font */
+
+/* Padding */
+.px {
+    padding: 40px 0;
+}
+.pt40 {
+    padding-top: 40px;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+/* End padding */
+
+/* Margin */
+.mt40 {
+    margin-top: 40px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mt15 {
+    margin-top: 15px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mb40 {
+    margin-bottom: 40px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+/* End margin */
+
+/* Button */
+.button {
+    border-radius: 0;
+    border: none;
+}
+/* End button */
+
+
+/* Tabel */
+.dataTables_wrapper select, input {
+    border-radius: 0 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    border-radius: 0 !important;
+    border-color: lightslategray !important;
+    background: white !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    border-radius: 0 !important;
+}
+
+/* End main style */
+
+/* Navbar */
+.navbar-collapse a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.navbar-collapse ul li a:hover {
+    background-color: #fff;
+    color: black !important;
+}
+.active {
+    color: white !important;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url('../img/navbar-icon.svg') !important;
+}
+/* End navbar */
+
+/* Main */
+/* Carousel */
+.indikator {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+}
+.mg15 {
+    margin: 0 15px !important;
+}
+/* End carousel */
+
+/* Data */
+.data__sekolah__section .bdx {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+/* End data */
+
+/* Footer */
+.footer__section .brand h4 {
+    line-height: 1.5rem;
+}
+.footer__section .deskripsi h4 {
+    line-height: 1.5rem;
+}
+.line {
+    width: 100%;
+    border: 1px solid white;
+}
+/* End footer */
+/* End custom style */
+
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    .navbar .navbar-brand h4 {
+        display: none !important;
+    }
+}
+/* End responsive */

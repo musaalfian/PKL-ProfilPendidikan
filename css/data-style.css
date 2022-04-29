@@ -1,0 +1,120 @@
+/* Custom style */
+
+/* Dropdown */
+.dropdown button {
+    font-family: var(--head-font) !important;
+    font-size: 18px !important;
+    color: black !important;
+}
+.dropdown .tombol {
+    padding: 10px 15px !important;
+    background-color: white;
+    border-radius: 0 !important;
+    border-color: lightgray !important;
+    box-shadow: none !important;
+}
+.dm__style {
+    border-radius: 0 !important;
+    border-color: lightgrey !important;
+}
+.tombol:focus {
+    box-shadow: var(--shadow-color) !important;
+}
+.dm__style li a {
+    font-family: var(--head-font) !important;
+    font-size: 14px !important;
+    color: black !important;   
+}
+
+/* End dropdown */
+
+/* Ajax tabs */
+.nav-tabs .active {
+color: black !important;
+}
+.nav-tabs .nav-item button {
+    border-radius: 0 !important;
+    font-family: var(--head-font);
+    font-size: 18px !important;
+}
+/* End ajax tabs */
+
+/* Table */
+.tabel {
+    border: 1px solid lightgrey;
+    padding: 30px 40px;
+}
+
+.tabel button {
+    background-color: white !important;
+    border-color: black !important;
+    padding: 5px 10px !important;
+    border-radius: 0 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    color: black !important;
+    box-sizing: border-box;
+}
+
+tr th {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    color: black !important;
+}
+tr td {
+    padding: 15px 18px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    color: black !important;
+    line-height: 24px !important;
+}
+.btn__aksi {
+    display: inline-flex;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    color: black !important; 
+}
+.dataTables_info {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    color: black !important; 
+}
+.dataTables_paginate {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    color: black !important; 
+}
+.pd__table {
+    padding: 15px 0 !important;
+    border-bottom: none !important;
+}
+/* End table */
+
+/* End custom style */
+
+
+/* Responsive */
+
+/* Large */
+@media screen and (max-width: 992px) {
+
+}
+
+/* Tablet */
+@media screen and (max-width: 768px)  {
+
+    /* Main page */
+    
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    .header .tombol {
+        padding: 1rem 1.5rem !important;
+    }
+}
+
+/* End responsive */

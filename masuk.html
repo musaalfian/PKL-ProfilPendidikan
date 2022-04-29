@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Fontawesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/masuk-style.css" />
+
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  -->
+    <title>Profil Pendidikan | Masuk</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg__nav py-3">
+      <div class="container">
+        <div class="container-fluid d-flex justify-content-between p-0">
+          <a
+            class="navbar-brand text-white body1 d-flex align-items-center"
+            href="index.html"
+          >
+            <img src="./img/logo-batang.png" height="50px" alt="" />
+            <h5 class="ms-2 text-white">
+              Dinas Pendidikan dan Kebudayaan <br />
+              Kabupaten Batang
+            </h5>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 w__item">
+              <li class="nav-item">
+                <a class="" aria-current="page" href="index.html">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="" aria-current="page" href="sd.html">Sekolah Dasar</a>
+              </li>
+              <li class="nav-item">
+                <a class="" aria-current="page" href="smp.html"
+                  >Sekolah Menengah Pertama</a
+                >
+              </li>
+            </ul>
+            <div class="masuk d-flex">
+              <a href="masuk.html" class="text-decoration-none active"
+                >Masuk
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End navbar -->
+
+    <!-- Login page -->
+    <div class="login__section">
+      <div class="login__content">
+        <h3 class="text-center fw-bold">Masuk</h3>
+        <div class="ket mt-2">
+          <h3 class="text-center text-danger">
+            Catatan : Menu ini hanya tersedia untuk Admin!
+          </h3>
+        </div>
+        <div class="isi mt-4">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pass" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="pass"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div
+              class="btn__masuk d-flex justify-content-between align-items-lg-baseline mt-5"
+            >
+              <a href="" class="text-decoration-none"> Lupa kata sandi? </a>
+              <button type="submit" class="btn btn-primary">Masuk</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End login page -->
+
+    <!-- Footer -->
+    <footer class="p-4">
+      <div class="container">
+        <h5 class="text-white text-center">
+          Copyright 2022 | Dinas Pendidikan dan Kebudayaan Kabupaten Batang
+        </h5>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
