@@ -14,8 +14,10 @@
 
     /* box shadow */
     --shadow-color: 0 0 0 2px lightgray !important;
-
     --bs-table-striped-bg: rgba(0, 0, 0, 0.0);
+
+    /* transtitions */
+    --main-trans: all 0.4s ease-in-out
 }
 /* End variable */
 
@@ -42,6 +44,9 @@
 .bglight {
     background-color: var(--light);
 }
+.bggrey {
+    background-color: var(--grey);
+}
 .bgdarkblue {
     background-color: var(--dark-blue);
 }
@@ -60,6 +65,12 @@
 .ff2 {
     font-family: var(--body-font);
 }
+.fs14 {
+    font-size: 14px;
+}
+.fs12 {
+    font-size: 12px;
+}
 h1 {
     font-size: 32px;
 }
@@ -77,6 +88,9 @@ h5 {
 }
 h6 {
     font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0 !important;
 }
 /* End font */
 
@@ -151,6 +165,30 @@ h6 {
 /* End main style */
 
 /* Navbar */
+.navbar .navbar-brand h4 {
+    display: none;
+}
+.dropdown__section ul {
+    border-radius: 0 !important;
+}
+.dropdown__section ul li {
+    margin-left: 0;
+}
+.dropdown__section ul li a {
+    color: black;
+    text-align: right;
+}
+.navbar .dropdown__section ul li a:hover {
+    color: var(--dark-blue) !important;
+    text-decoration: underline;
+}
+.dropdown-menu[data-bs-popper] {
+    left: auto !important;
+    right: 0 !important;
+}
+.navbar-nav .dropdown-menu {
+    position: absolute !important;
+}
 .navbar-collapse a {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -169,19 +207,20 @@ h6 {
 .navbar-light .navbar-toggler-icon {
     background-image: url('../img/navbar-icon.svg') !important;
 }
+.navbar-light .navbar-toggler {
+    border-color: white !important;
+}
 /* End navbar */
 
-/* Main */
-/* Carousel */
-.indikator {
-    width: 15px !important;
-    height: 15px !important;
-    border-radius: 50%;
+/* Info section */
+.info__section h4 {
+    margin-bottom: 0 !important;
 }
-.mg15 {
-    margin: 0 15px !important;
+.info__section a:hover {
+    color: var(--blue) !important;
+    transition: .3s;
 }
-/* End carousel */
+/* End info section */
 
 /* Data */
 .data__sekolah__section .bdx {
@@ -191,30 +230,49 @@ h6 {
 /* End data */
 
 /* Footer */
-.footer__section .brand h4 {
-    line-height: 1.5rem;
-}
-.footer__section .deskripsi h4 {
+.footer__section h4, h5 {
     line-height: 1.5rem;
 }
 .line {
     width: 100%;
     border: 1px solid white;
 }
+.footer__section .kotak__saran button:hover {
+    background-color: lightgray !important;
+}
 /* End footer */
 /* End custom style */
 
 
 /* Responsive */
+/* Lg */
+@media screen and (min-width: 992px) {
+    .navbar-nav li {
+        margin-left: 3rem;
+    }
+
+}
+
 /* Tablet */
-@media screen and (max-width: 768px) {
-    
+@media screen and (min-width: 768px) {
+    .footer__section .brand h4 {
+        margin-bottom: 0;
+    }
 }
 
 /* Mobile */
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
     .navbar .navbar-brand h4 {
-        display: none !important;
+        display: inline;
+    }
+    .data__sekolah__section .content h2 {
+        font-size: 24px;
+    }
+    .footer__section h4 {
+        font-size: 16px;
+    }
+    .info__section h4, a {
+        font-size: 16px;
     }
 }
 /* End responsive */
