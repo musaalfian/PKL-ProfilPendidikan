@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Fontawesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="../css/admin-style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Datatables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  </head>
+
+  <body>
+    <input type="checkbox" name="" id="nav-toogle" />
+    <!-- Sidebar section -->
+    <div class="sidebar__section">
+      <div
+        class="sidebar__brand d-flex align-items-center justify-content-center"
+      >
+        <div class="d-flex justify-content-center px-2 py-3 align-items-center">
+          <i class="fas fa-user-circle me-2"></i>
+          <h3 class="text-white ff2">Admin</h3>
+        </div>
+      </div>
+      <div class="sidebar__menu">
+        <div class="menu__content">
+          <a href="index.html" class="text-decoration-none">
+            <i class="bi bi-house-door-fill">
+              <span class="ms-2">Dashboard</span>
+            </i>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="data-sd.html" class="text-decoration-none">
+            <i class="fa-solid fa-rectangle-list"></i>
+            <span class="ms-2 fs18">Data SD</span>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="data-smp.html" class="text-decoration-none">
+            <i class="fa-solid fa-rectangle-list"></i>
+            <span class="ms-2 fs18">Data SMP</span>
+          </a>
+        </div>
+
+        <div class="menu__content mt10">
+          <a href="struktur-organisasi.html" class="text-decoration-none">
+            <i class="bi bi-person-lines-fill"></i>
+            <span class="ms-2 fs18">Struktur Organisasi</span>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="kotak-saran.html" class="text-decoration-none">
+            <i class="bi bi-chat-left-text-fill active"></i>
+            <span class="ms-2 fs18 active">Kotak Saran</span>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="login.html" class="text-decoration-none">
+            <i class="bi bi-door-open-fill"></i>
+            <span class="ms-2 fs18">Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End sidebar section -->
+
+    <!-- Main section -->
+    <div class="main__section data__sd">
+      <!-- Header -->
+      <div
+        class="header bgdarkblue d-flex justify-content-between align-items-center px-4"
+      >
+        <label for="nav-toogle">
+          <img src="../img/bar-putih.svg" height="20px" alt="" for />
+        </label>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="../img/logo-batang.png" height="50px" alt="" />
+          <h4 class="text-white ff2 ms-2">
+            Dinas Pendidikan dan Kebudayaan <br />
+            Kabupaten Batang
+          </h4>
+        </a>
+        <div class="kosong"></div>
+      </div>
+      <!-- End header -->
+
+      <!-- Main content -->
+      <div class="main__content px-4 pt40">
+        <h2 class="fw-bold darkblue">Kotak Saran</h2>
+        <div class="mt20">
+          <!-- Tabel -->
+          <div class="tabel__section px-3 table-responsive pt20 pb20 bgwhite">
+            <table
+              class="table table-responsive table-hover mb20i"
+              id="table_id1"
+            >
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center" style="width: 0">No</th>
+                  <th scope="col" style="">Tanggal</th>
+                  <th scope="col" style="">Nama Pengirim</th>
+                  <th scope="col" class="" style="">Email</th>
+                  <th scope="col" class="" style="">Pesan</th>
+                  <th scope="col" class="text-center">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Data -->
+                <tr>
+                  <td scope="row" class="text-center">1</td>
+                  <td>1 Maret 2022</td>
+                  <td class="">Khoeru Roziqin</td>
+                  <td class="">roziqin@gmail.com</td>
+                  <td class="">
+                    Website sudah bagus, mencakup semua informasi yang saya
+                    butuhkan
+                  </td>
+                  <td class="text-center">
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="button button__transparan"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <i class="bi bi-trash3-fill red"></i>
+                    </button>
+
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3
+                              class="modal-title fw-bold"
+                              id="exampleModalLabel"
+                            >
+                              Konfirmasi
+                            </h3>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <h4 style="text-align: left">
+                              Yakin ingin menghapus data?
+                            </h4>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Batal
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                              Hapus
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End tabel -->
+        </div>
+      </div>
+      <!-- End main content -->
+
+      <!-- Footer -->
+      <footer class="p-4 text-center mt40">
+        <h4 class="ff2">
+          ©2022. Dinas Pendidikan dan Kebudayaan Kabupaten Batang. All rights
+          reserved
+        </h4>
+      </footer>
+      <!-- End footer -->
+    </div>
+    <!-- End main section -->
+
+    <!-- Data sekolah -->
+    <script>
+      $(document).ready(function () {
+        $("#table_id1").DataTable();
+      });
+    </script>
+
+    <!-- Data tenaga pendidik -->
+    <script>
+      $(document).ready(function () {
+        $("#example2").DataTable();
+      });
+    </script>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Custom -->
+    <script src="/assets/js/script.js"></script>
+    <script>
+      // sidebar
+      window.addEventListener("DOMContentLoaded", (event) => {
+        // Toggle the side navigation
+        const sidebarToggle = document.body.querySelector("#sidebarToggle");
+        if (sidebarToggle) {
+          sidebarToggle.addEventListener("click", (event) => {
+            event.preventDefault();
+            document.body.classList.toggle("sb-sidenav-toggled");
+            localStorage.setItem(
+              "sb|sidebar-toggle",
+              document.body.classList.contains("sb-sidenav-toggled")
+            );
+          });
+        }
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/55f12d8286.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Dougnat chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Dougnat sd -->
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "pie",
+        data: {
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [5000, 1000],
+              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+              hoverOffset: 4,
+            },
+          ],
+        },
+        options: {},
+      });
+    </script>
+
+    <!-- Dougnat smp -->
+    <script>
+      const ctx2 = document.getElementById("myChart2").getContext("2d");
+      const myChart2 = new Chart(ctx2, {
+        type: "pie",
+        data: {
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [5000, 1000],
+              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+              hoverOffset: 4,
+            },
+          ],
+        },
+        options: {},
+      });
+    </script>
+
+    <!-- Tooltip -->
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
+</html>

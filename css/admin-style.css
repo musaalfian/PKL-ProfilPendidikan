@@ -1,137 +1,387 @@
-/* Sidebar */
-.sidebar__admin {
-  min-height: 100% !important;
+.main__section {
+  min-height: 100vh;
 }
-.bg__biru {
-    background-color: var(--dark-blue);
+footer {
+  position: sticky;
+  top: 100%;
 }
-.admin a {
-    font-family: var(--body-font) !important;
-}
-/* End sidebar */
 
-/* Main */
-.pd__40 {
-    padding: 40px;
+/* Toogle responsive */
+#nav-toogle {
+  display: none;
 }
-.color__blue {
-    color: var(--blue) !important;
+#nav-toogle:checked + .sidebar__section {
+  width: 0px;
+  transition: .3s;
 }
-.fs-48 {
-    font-size: 48px !important;
+#nav-toogle:checked + .sidebar__section .sidebar__menu .menu__content i {
+  display: none;
 }
-.dashboard .item {
-    background-color: white;
-    box-shadow: 0px 4px 25px 0px rgba(0,0,0,0.05);
-    padding: 20px 10px;
+#nav-toogle:checked + .sidebar__section .sidebar__menu .menu__content span {
+  display: none;
 }
-.dashboard .col-4 {
-    flex-grow: 1 !important;
+#nav-toogle:checked ~ .main__section {
+  margin-left: 0;
 }
-.bg__white {
-  background-color: white !important;
-  box-shadow: 0px 4px 25px 0px rgba(0,0,0,0.05);
+#nav-toogle:checked ~ .main__section .header {
+  width: 100%;
+  left: 0;
 }
-.pd__table {
-  border-top: 1px solid lightgray;
-  border-right: 1px solid lightgray;
-  border-left: 1px solid lightgray;
+#nav-toogle:checked ~ .main__section .header .kosong {
+  width: 0;
 }
-.tabel button {
-  border-radius: 0;
-  background-color: var(--blue) !important;
-  border: 0 !important;
-  padding: 5px 15px !important;
-  font-size: 16px !important;
+/* End toogle responsive */
+
+/* Sidebar */
+.sidebar__section {
+  width: 345px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+  transition: width 300ms;
+}
+.sidebar__brand {
+  height: 6rem;
+  box-sizing: border-box;
+  border-bottom: 3px solid white;
+}
+
+.sidebar__menu .menu__content  button  {
+  color: black;
+}
+.sidebar__section .sidebar__brand i {
+  color: white;
+  font-size: 1.5rem;
+}
+.me__icon {
+  margin-left: .7rem ;
+}
+.menu__content {
+  margin-top: 20px;
+  margin-left:20%;
+  margin-right:20%;
+  padding: 7px 10px;
+}
+.menu__content button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
   color: white;
   font-family: var(--head-font);
 }
-/* End main */
+
+/* Dropdown data sekolah */
+.dropdown__section .dropdown__content {
+  right: 147.5px !important;
+  left: auto !important;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.menu__content:hover .dropdown__section i {
+  color: black !important;
+}
+/* End sidebar */
+
+/* Main section */
+.main__section {
+  background-color: var(--light);
+  min-height: 100vh;
+}
+.main__section {
+  margin-left: 345px;
+  transition: margin-left 300ms;
+}
+.main__section .header {
+  position: fixed;
+  left: 345px;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: 10;
+  transition: width 300ms;
+}
+.main__section .header .kosong {
+  width: 22%;
+  transition: width 300ms;
+}
+.main__section img {
+  color: white;
+}
+.main__section .header {
+  height: 5.9rem;
+  box-sizing: border-box;
+  border-left: 3px solid white;
+  transition: left 300ms;
+}
+.main__content {
+  margin-top: 5.9rem;
+}
+.menu__content a i {
+  font-style: normal;
+  font-size: 18px;
+  width: 18px !important;
+}
+.menu__content:hover {
+  background-color: white;
+}
+.menu__content:hover a i{
+  color: black !important;
+}
+.menu__content:hover span{
+  color: black !important;
+}
+/* End main section */
+
+/* Dashboard section */
+.dashboard__section .dashboard__content {
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2); 
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.05);
+}
+.sd__section .tabel__section {
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2); 
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.05);
+}
+
+/* Sd section */
+.sd__section {
+  background-color: white;
+}
+.sd__section tbody {
+  border-top: none !important;
+}
+.sd__section thead {
+  border-bottom: 1px solid var(--dark-blue);
+}
+.sd__section .alamat {
+  width: 50% !important;
+}
+
+/* Tenaga sd section */
+.tenaga__pendidik__section {
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2); 
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.05);
+  min-height: 100%;
+}
+.tenaga__pendidik__section .ms__laki {
+  margin-left: 2.4rem;
+}
+/* Donut chart */
+.chartBox {
+  margin: auto;
+  width: 230px;
+}
+.kotak__merah {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 99, 132);
+}
+.kotak__biru {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(54, 162, 235);
+}
 
 /* Footer */
-.footer {
-    width: 100%;
-}
 footer {
-    background-color: lightgrey !important;
+  background-color: white !important;
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2); 
+  box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.05);
 }
-/* End footer */
-#wrapper {
-    overflow-x: hidden;
-  }
-  
-  #sidebar-wrapper {
-    min-height: 100vh;
-    /* margin-left: -15rem; */
-    transition: margin 0.25s ease-out;
-  }
-  
-  #sidebar-wrapper .sidebar-heading {
-    padding: 0.875rem 1.25rem;
-    font-size: 1.2rem;
-  }
-  
-  #sidebar-wrapper .list-group {
-    width: 252px;
-  }
-  @media (min-width: 375px) {
-    #sidebar-wrapper {
-      margin-left: 0;
-    }
-  
-    #page-content-wrapper {
-      min-width: 0;
-      width: 100%;
-    }
-  
-    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-      margin-left: -16rem;
-    }
-    .wraper nav {
-      width: 900px !important;
-    }
-  }
-  .menu a {
-      text-decoration: none;
-      color: lightgrey;
-      padding: 5px 15px;
-      margin: 0 10%;
-  }
-  .menu a:hover {
-      background-color: white;
-      color: black !important;
-  }
-  /* .menu:hover {
-    background-color: white;
-  }
-  .menu:hover a {
-    color: #000000;
-  }
-  .menu a {
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-  }
-  .menu a i {
-    margin-right: 5px;
-  } */
 
-  
-  .nav-admin,
-  .sidebar-heading {
-    height: 84px;
+
+/* *********************************** */
+/*              DATA SD                */
+/* *********************************** */
+.data__sd .dropdown-menu {
+  min-width: 12.8rem !important;
+}
+.mb20i {
+  margin-bottom: 20px !important;
+}
+.tabel__tenaga__pendidik th{
+  width: unset !important;
+}
+
+/* *********************************** */
+/*          DETAIL SEKOLAH             */
+/* *********************************** */
+
+
+/* *********************************** */
+/*           EDIT SEKOLAH              */
+/* *********************************** */
+.edit__sekolah__section textarea {
+  min-height: 7.8rem;
+  border-radius: 0 !important;
+}
+.edit__sekolah__section label {
+  color: var(--grey);
+}
+.edit__sekolah__section input::placeholder{
+  color: lightslategray;
+}
+.edit__sekolah__section input {
+  color: lightslategray;
+}
+
+/* *********************************** */
+/*       EDIT TENAGA PENDIDIK          */
+/* *********************************** */
+.edit__sekolah__section option {
+  color: var(--grey) !important;
+}
+
+/* *********************************** */
+/*       STRUKTUR ORGANISASI           */
+/* *********************************** */
+
+
+/* *********************************** */
+/*          LOGIN SECTION              */
+/* *********************************** */
+.w65 {
+  width: 65%;
+}
+.kiri {
+  width: 50%;
+}
+.kanan {
+  width: 50%;
+  background-color: var(--dark-blue);
+  min-height: 100vh;
+}
+.indikator {
+  position: static;
+}
+.btn__indikator__kanan, .btn__indikator__kiri {
+  position: static;
+}
+.indikator__icon {
+  width: 1.5rem;
+}
+.login__section input::placeholder {
+  color: lightslategray;
+  font-size: 14px;
+}
+.eye i {
+  position: absolute;
+  right: 3%;
+  top: 7px;
+}
+
+/* Responsive */
+@media screen and (max-width: 2560px) {
+  .sidebar__section {
+    width: 300px;
+    transition: .3s;
   }
-  
-  .border-b {
-    border-bottom: 4px solid white;
+  .sidebar__menu .menu__content {
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  .border-s {
-    border-left: 4px solid white;
+  .sidebar__section .sidebar__menu .menu__content i {
+    display: inline;
   }
-  .admin-content {
-    width: 90%;
+  .sidebar__section .sidebar__menu .menu__content span {
+    display: inline;
   }
-  /**********************************************************/
-  /*         ============== END ADMIN ============          */
-  /**********************************************************/
+  .main__section {
+    margin-left: 300px;
+  }
+  .main__section .header {
+    width: 100%;
+    left: 300px;
+  }
+  .sidebar__section .sidebar__brand i, .sidebar__section .sidebar__brand h3 {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .login__section {
+    justify-content: center;
+  }
+  .login__section .login__content {
+    width: 100%;
+  }
+  .login__section .kiri {
+    display: inline !important;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .login__section .login__content {
+    padding: 4rem 1.5rem;
+  }
+  .login__section .kanan {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar__section {
+    width: 200px;
+    transition: .3s;
+  }
+  .sidebar__menu .menu__content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .sidebar__section .sidebar__menu .menu__content i {
+    display: inline;
+  }
+  .sidebar__section .sidebar__menu .menu__content span {
+    display: inline;
+  }
+  .main__section {
+    margin-left: 200px;
+  }
+  .main__section .header {
+    width: 100%;
+    left: 200px;
+  }
+  .sidebar__section .sidebar__brand i, .sidebar__section .sidebar__brand h3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar__section {
+    width: 200px;
+    transition: .3s;
+  }
+  .sidebar__menu .menu__content {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .sidebar__section .sidebar__menu .menu__content i {
+    display: inline;
+  }
+  .sidebar__section .sidebar__menu .menu__content span {
+    display: inline;
+  }
+  .main__section {
+    margin-left: 200px;
+  }
+  .main__section .header {
+    width: 100%;
+    left: 200px;
+  }
+  .sidebar__section .sidebar__brand i, .sidebar__section .sidebar__brand h3 {
+    display: none;
+  }
+  .main__section .header a {
+    display: none !important;
+  }
+}
+
+
+

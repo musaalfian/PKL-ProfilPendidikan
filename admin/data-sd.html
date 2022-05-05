@@ -1,448 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Sekolah Dasar</title>
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
 
-  <!-- ICON -->
-  <script src="https://kit.fontawesome.com/5fbcc24921.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <!-- Fontawesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-  <!-- Fontawesome Icon -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
+    <!-- Custom style -->
+    <link rel="stylesheet" href="../css/admin-style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../css/admin-style.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/admin-data-sd.css" />
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Custom JavaScript -->
-  <link rel="stylesheet" href="../js/main.js">
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-</head>
+    <!-- Datatables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  </head>
 
-<body>
-  <div class="admin d-flex" id="wrapper">
-    <!-- Sidebar-->
+  <body>
+    <input type="checkbox" name="" id="nav-toogle" />
+    <!-- Sidebar section -->
     <div class="sidebar__section">
-      <div class="sidebar__admin bg__biru" sty id="sidebar-wrapper" >
-        <div class="sidebar-heading d-flex justify-content-center text-white border-b">
-          <div class="username bold d-flex align-items-center">
-            <i class="bi bi-person-circle me-2" style="font-size: 28px"></i>
-            <h4 class="fs-16 text-white">ADMIN</h3>
-          </div>
-        </div>
-        <div class="menu list-group mt__20">
-            <a class="" href="index.html"><i class="fas fa-home-alt me-2 mb-2"></i>Dashboard</a>
-              <a class="active" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fas fa-graduation-cap me-2 mb-2"></i>Data SD
-              </a>
-              <a class="" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fas fa-graduation-cap me-2"></i>Data SMP
-              </a>
+      <div
+        class="sidebar__brand d-flex align-items-center justify-content-center"
+      >
+        <div class="d-flex justify-content-center px-2 py-3 align-items-center">
+          <i class="fas fa-user-circle me-2"></i>
+          <h3 class="text-white ff2">Admin</h3>
         </div>
       </div>
-  </div>
-    <!-- Page content wrapper-->
-    <div id="page-content-wrapper " class="wrap" style="width: 100%">
-      <!-- Top navigation-->
-      <nav class="navbar nav-admin navbar-expand-lg border-bottom bg__biru p-2 py-3 border-s" id="navbar"  >
-        <div class="icon-navbar text-white">
-          <!-- <i class="bi bi-list icon_list" style="cursor: pointer; font-size: 20px" id="sidebarToggle"></i> -->
-          <i class="bi bi-three-dots-vertical icon_dot" style="cursor: pointer; font-size: 20px" id="sidebarToggle"></i>
+      <div class="sidebar__menu">
+        <div class="menu__content">
+          <a href="index.html" class="text-decoration-none">
+            <i class="bi bi-house-door-fill">
+              <span class="ms-2">Dashboard</span>
+            </i>
+          </a>
         </div>
-        <div class="logo-admin d-flex align-items-center mx-auto">
-          <img class="me-2" src="../img/logo-batang.png" alt="">
-          <h4 class="d-flex align-items-center ms-2 text-white fs-16">
+        <div class="menu__content mt10">
+          <a href="data-sd.html" class="text-decoration-none">
+            <i class="fa-solid fa-rectangle-list active"></i>
+            <span class="ms-2 fs18 active">Data SD</span>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="data-smp.html" class="text-decoration-none">
+            <i class="fa-solid fa-rectangle-list"></i>
+            <span class="ms-2 fs18">Data SMP</span>
+          </a>
+        </div>
+
+        <div class="menu__content mt10">
+          <a href="struktur-organisasi.html" class="text-decoration-none">
+            <i class="bi bi-person-lines-fill"></i>
+            <span class="ms-2 fs18">Struktur Organisasi</span>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="" class="text-decoration-none">
+            <i class="bi bi-chat-left-text-fill"></i>
+            <span class="ms-2 fs18">Kotak Saran</span>
+          </a>
+        </div>
+        <div class="menu__content mt10">
+          <a href="login.html" class="text-decoration-none">
+            <i class="bi bi-door-open-fill"></i>
+            <span class="ms-2 fs18">Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End sidebar section -->
+
+    <!-- Main section -->
+    <div class="main__section data__sd">
+      <!-- Header -->
+      <div
+        class="header bgdarkblue d-flex justify-content-between align-items-center px-4"
+      >
+        <label for="nav-toogle">
+          <img src="../img/bar-putih.svg" height="20px" alt="" for />
+        </label>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="../img/logo-batang.png" height="50px" alt="" />
+          <h4 class="text-white ff2 ms-2">
             Dinas Pendidikan dan Kebudayaan <br />
             Kabupaten Batang
           </h4>
+        </a>
+        <div class="kosong"></div>
+      </div>
+      <div class="main__content px-4 pt40">
+        <h2 class="fw-bold darkblue">Data Sekolah Dasar</h2>
+        <div class="dropdown dropdown__section mt20">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            -- Pilih tahun pelajaran --
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item grey" href="#">2022</a></li>
+            <li><a class="dropdown-item grey" href="#">2021</a></li>
+            <li><a class="dropdown-item grey" href="#">2020</a></li>
+          </ul>
         </div>
-      </nav>
+        <!-- End header -->
 
-      <!-- Main section-->
-      <div class="pd__40">
-        <div class="mx-auto position-relative">
-          <h3 class="fw-bold fs-36">Data Sekolah Dasar</h3>
-          <div class="content mt__40">
-            <!-- Ajax tabs -->
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active fs-18"
-                  id="home-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#home"
-                  type="button"
-                  role="tab"
-                  aria-controls="home"
-                  aria-selected="true"
-                >
-                  Data Sekolah
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link fs-18"
-                  id="profile-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#profile"
-                  type="button"
-                  role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                >
-                  Data Tenaga Pendidik
-                </button>
-              </li>
-            </ul>
+        <!-- Main content -->
+        <div class="mt20">
+          <!-- Ajax tabs -->
+          <ul class="ajax__section nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                Data Sekolah
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                Data Tenaga Pendidik
+              </button>
+            </li>
+          </ul>
 
-            <div class="tab-content" id="myTabContent">
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active bgwhite"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <!-- Table -->
               <div
-                class="tab-pane fade show active"
-                id="home"
-                role="tabpanel"
-                aria-labelledby="home-tab"
+                class="tabel__section border-top-0 px-3 table-responsive pt20 pb20"
               >
-                <!-- Table -->
-                <div class="tabel table-responsive border-top-0">
-                  <div class="header mb__20">
-                    <h3 class="fw-bold">Data Sekolah</h3>
-                  </div>
-                  <table class="table table-hover tr pd__table" id="table_id3">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="text-center">No</th>
-                        <th scope="col">Nama Sekolah</th>
-                        <th scope="col">Akreditasi</th>
-                        <th scope="col">Kontak</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- Data -->
-                      <tr>
-                        <td scope="row" class="text-center">1</td>
-                        <td>SD N Kaliboyo 01</td>
-                        <td class="text-center">A</td>
-                        <td>+6285329999577</td>
-                        <td>
-                          Jl. Raya Kaliboyo, Kaliboyo, Kec. Tulis, Kab. Batang
-                          Prov. Jawa Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
-                            >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
+                <table
+                  class="table table-responsive table-hover mb20i"
+                  id="table_id1"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-center">No</th>
+                      <th scope="col">Nama Sekolah</th>
+                      <th scope="col" class="text-center">Akreditasi</th>
+                      <th scope="col">Kontak</th>
+                      <th scope="col">Alamat</th>
+                      <th scope="col" class="text-center">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Data -->
+                    <tr>
+                      <td scope="row" class="text-center">1</td>
+                      <td>SD N Kaliboyo 01</td>
+                      <td class="text-center">A</td>
+                      <td>+6285329999577</td>
+                      <td>
+                        Jl. Raya Kaliboyo, Kaliboyo, Kec. Tulis, Kab. Batang
+                        Prov. Jawa Tengah
+                      </td>
+                      <td class="text-center">
+                        <div class="d-flex justify-content-center">
+                          <div class="btn__edit">
+                            <a href="detail-sekolah-sd.html" class="me-2">
+                              <button
+                                type="button"
+                                class="button button__transparan"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Lihat detail"
+                              >
+                                <i class="bi bi-pencil-square blue"></i></button
+                            ></a>
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">2</td>
-                        <td>SD N Wringingintung 01</td>
-                        <td class="text-center">B</td>
-                        <td>+6285236477898</td>
-                        <td>
-                          Jl. Sendang-Tulis, Wringingintung, Kec. Tulis, Kab.
-                          Batang Prov. Jawa Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
+                          <div class="btn__hapus">
+                            <!-- Button trigger modal -->
+                            <button
+                              type="button"
+                              class="button button__transparan"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
                             >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">3</td>
-                        <td>SD N Kandeman 01</td>
-                        <td class="text-center">A</td>
-                        <td>+6285329999577</td>
-                        <td>
-                          Jl. Kandeman-Batang, Kandeman , Kec. Kandeman, Kab.
-                          Batang Prov. Jawa Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
+                              <i class="bi bi-trash3-fill red"></i>
+                            </button>
+
+                            <!-- Modal -->
+                            <div
+                              class="modal fade"
+                              id="exampleModal"
+                              tabindex="-1"
+                              aria-labelledby="exampleModalLabel"
+                              aria-hidden="true"
                             >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h3
+                                      class="modal-title fw-bold"
+                                      id="exampleModalLabel"
+                                    >
+                                      Konfirmasi
+                                    </h3>
+                                    <button
+                                      type="button"
+                                      class="btn-close"
+                                      data-bs-dismiss="modal"
+                                      aria-label="Close"
+                                    ></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <h4 style="text-align: left">
+                                      Yakin ingin menghapus data?
+                                    </h4>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary"
+                                      data-bs-dismiss="modal"
+                                    >
+                                      Batal
+                                    </button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-danger"
+                                    >
+                                      Hapus
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">4</td>
-                        <td>SD N Siberuk 01</td>
-                        <td class="text-center">A</td>
-                        <td>+6285329999577</td>
-                        <td>
-                          Jl. Siberuk, Tulis , Kec. Tulis, Kab. Batang Prov.
-                          Jawa Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
-                            >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">5</td>
-                        <td>SD N Tulis 01</td>
-                        <td class="text-center">A</td>
-                        <td>+6285329999577</td>
-                        <td>
-                          Jl. Tulis, Tulis , Kec. Tulis, Kab. Batang Prov. Jawa
-                          Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
-                            >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">6</td>
-                        <td>SD N Tulis 02</td>
-                        <td class="text-center">B</td>
-                        <td>+6285329999577</td>
-                        <td>
-                          Jl. Tulis, Tulis , Kec. Tulis, Kab. Batang Prov. Jawa
-                          Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
-                            >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">7</td>
-                        <td>SD N Sawahan 01</td>
-                        <td class="text-center">B</td>
-                        <td>+6285329999577</td>
-                        <td>
-                          Jl. Sawahan, Tulis , Kec. Tulis, Kab. Batang Prov.
-                          Jawa Tengah
-                        </td>
-                        <td class="text-center">
-                          <div class="btn__aksi">
-                            <a
-                              href="detail-sekolah.html"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="Lihat detail"
-                            >
-                              <i class="bi bi-pencil-square"></i>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <!-- End data -->
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="profile"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-              >
-                <!-- Table -->
-                <div class="tabel table-responsive border-top-0">
-                  <div class="header mb__40">
-                    <h2 class="fw-bold">Data Tenaga Pendidik</h2>
-                  </div>
-                  <table class="table table-hover tr pd__table" id="table_id2">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="text-center">No</th>
-                        <th scope="col" width="20%">Nama</th>
-                        <th scope="col" width="15%">NIP</th>
-                        <th scope="col" width="18%">Jenis Kelamin</th>
-                        <th scope="col" width="18%">Jabatan</th>
-                        <th scope="col">Instansi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- Data -->
-                      <tr>
-                        <td scope="row" class="text-center">1</td>
-                        <td>Rafli Ferdian Ramadani</td>
-                        <td>123456789</td>
-                        <td>Laki laki</td>
-                        <td>Kepala Sekolah</td>
-                        <td>SDN Kaliboyo 01</td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">2</td>
-                        <td>Musa Alfian Maulana</td>
-                        <td>123456789</td>
-                        <td>Laki laki</td>
-                        <td>Guru</td>
-                        <td>SDN Tulis 01</td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">3</td>
-                        <td>Mr. x</td>
-                        <td>123456789</td>
-                        <td>Laki Perempuan</td>
-                        <td>Tenaga Administrasi</td>
-                        <td>SDN Kandeman 01</td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">4</td>
-                        <td>Mr. x</td>
-                        <td>123456789</td>
-                        <td>Laki Perempuan</td>
-                        <td>Tenaga Administrasi</td>
-                        <td>SDN Kandeman 01</td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">5</td>
-                        <td>Mr. x</td>
-                        <td>123456789</td>
-                        <td>Laki Perempuan</td>
-                        <td>Tenaga Administrasi</td>
-                        <td>SDN Kandeman 01</td>
-                      </tr>
-                      <tr>
-                        <td scope="row" class="text-center">6</td>
-                        <td>Mr. x</td>
-                        <td>123456789</td>
-                        <td>Laki Perempuan</td>
-                        <td>Tenaga Administrasi</td>
-                        <td>SDN Kandeman 01</td>
-                      </tr>
-                      <!-- End data -->
-                    </tbody>
-                  </table>
-                </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- End data -->
+                  </tbody>
+                </table>
               </div>
             </div>
-            <!-- End ajax tab -->
-          </div>
-        </div>
-      </div>
-      <!-- End main section -->
+            <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <!-- Table tenaga pendidik -->
+              <div
+                class="tabel__tenaga__pendidik tabel__section border-top-0 px-3 table-responsive bgwhite pt20 pb20"
+              >
+                <table
+                  class="table table-responsive table-hover mb20i"
+                  id="example2"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-center">
+                        <div class="fw600 grey" style="width: 0">No</div>
+                      </th>
+                      <th scope="col">NIP</th>
+                      <th scope="col">Nama Lengkap</th>
+                      <th scope="col">Jenis Kelamin</th>
+                      <th scope="col">Jabatan</th>
+                      <th scope="col" class="text-center">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Data -->
+                    <tr>
+                      <td scope="row" class="text-center">1</td>
+                      <td>24060111920039</td>
+                      <td>Musa Alfian Maulana</td>
+                      <td>Laki-laki</td>
+                      <td>Kepala sekolah</td>
+                      <td class="text-center">
+                        <div class="d-flex justify-content-center">
+                          <div class="btn__edit">
+                            <a href="edit-tenaga-pendidik-sd.html" class="me-2"
+                              ><button
+                                type="button"
+                                class="button__transparan button"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Edit"
+                              >
+                                <i class="bi bi-pencil-square blue"></i></button
+                            ></a>
+                          </div>
+                          <div class="btn__hapus">
+                            <!-- Button trigger modal -->
+                            <button
+                              type="button"
+                              class="button button__transparan"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal2"
+                            >
+                              <i class="bi bi-trash3-fill red"></i>
+                            </button>
 
-      <!-- Footer -->
-      <footer class="text-center p-3">
-        <h4 class="fs-16">
-          <span class="text-blue fs-16">©2022.</span> Dinas
-              Pendidikan dan Kebudayaan Kabupaten Batang. All rights reserved
+                            <!-- Modal -->
+                            <div
+                              class="modal fade"
+                              id="exampleModal2"
+                              tabindex="-1"
+                              aria-labelledby="exampleModalLabel"
+                              aria-hidden="true"
+                            >
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h3
+                                      class="modal-title fw-bold"
+                                      id="exampleModalLabel"
+                                    >
+                                      Konfirmasi
+                                    </h3>
+                                    <button
+                                      type="button"
+                                      class="btn-close"
+                                      data-bs-dismiss="modal"
+                                      aria-label="Close"
+                                    ></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <h4 style="text-align: left">
+                                      Yakin ingin menghapus data?
+                                    </h4>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button
+                                      type="button"
+                                      class="btn btn-secondary"
+                                      data-bs-dismiss="modal"
+                                    >
+                                      Batal
+                                    </button>
+                                    <button
+                                      type="button"
+                                      class="btn btn-danger"
+                                    >
+                                      Hapus
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- End data -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End ajax tab -->
+        </div>
+        <!-- End main content -->
+      </div>
+
+      <!-- Foooter -->
+      <footer class="p-4 text-center mt40">
+        <h4 class="ff2">
+          ©2022. Dinas Pendidikan dan Kebudayaan Kabupaten Batang. All rights
+          reserved
         </h4>
       </footer>
       <!-- End footer -->
     </div>
-  </div>
+    <!-- End main section -->
 
-  <!-- LOGOUT  Modal -->
-  <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="logoutModalLabel">
-            Anda yakin akan keluar?
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Pilih "Logout" dibawah jika anda ingin mengakhiri sesimu sekarang.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Batal
-          </button>
-          <a href="/index.html" class="btn btn-danger">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Data sekolah -->
+    <script>
+      $(document).ready(function () {
+        $("#table_id1").DataTable();
+      });
+    </script>
 
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Datatables -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js">
-  </script>
-  <!-- JS Custom -->
-  <script src="/assets/js/script.js"></script>
-  <script>
-    // sidebar
-    window.addEventListener("DOMContentLoaded", (event) => {
-      // Toggle the side navigation
-      const sidebarToggle = document.body.querySelector("#sidebarToggle");
-      if (sidebarToggle) {
-        sidebarToggle.addEventListener("click", (event) => {
-          event.preventDefault();
-          document.body.classList.toggle("sb-sidenav-toggled");
-          localStorage.setItem(
-            "sb|sidebar-toggle",
-            document.body.classList.contains("sb-sidenav-toggled")
-          );
-        });
-      }
-    });
-  </script>
-</body>
+    <!-- Data tenaga pendidik -->
+    <script>
+      $(document).ready(function () {
+        $("#example2").DataTable();
+      });
+    </script>
 
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Custom -->
+    <script src="/assets/js/script.js"></script>
+    <script>
+      // sidebar
+      window.addEventListener("DOMContentLoaded", (event) => {
+        // Toggle the side navigation
+        const sidebarToggle = document.body.querySelector("#sidebarToggle");
+        if (sidebarToggle) {
+          sidebarToggle.addEventListener("click", (event) => {
+            event.preventDefault();
+            document.body.classList.toggle("sb-sidenav-toggled");
+            localStorage.setItem(
+              "sb|sidebar-toggle",
+              document.body.classList.contains("sb-sidenav-toggled")
+            );
+          });
+        }
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/55f12d8286.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Dougnat chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Dougnat sd -->
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "pie",
+        data: {
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [5000, 1000],
+              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+              hoverOffset: 4,
+            },
+          ],
+        },
+        options: {},
+      });
+    </script>
+
+    <!-- Dougnat smp -->
+    <script>
+      const ctx2 = document.getElementById("myChart2").getContext("2d");
+      const myChart2 = new Chart(ctx2, {
+        type: "pie",
+        data: {
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [5000, 1000],
+              backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+              hoverOffset: 4,
+            },
+          ],
+        },
+        options: {},
+      });
+    </script>
+
+    <!-- Tooltip -->
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
 </html>

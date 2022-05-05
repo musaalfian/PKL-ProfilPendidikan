@@ -38,11 +38,23 @@
 .darkblue {
     color: var(--dark-blue);
 }
+.blue {
+    color: var(--blue);
+}
+.red {
+    color: var(--red);
+}
+.lightlattegray {
+    color: lightslategray;
+} 
 /* End color */
 
 /* Background color */
 .bglight {
     background-color: var(--light);
+}
+.bgwhite {
+    background-color: white;
 }
 .bggrey {
     background-color: var(--grey);
@@ -59,11 +71,17 @@
 /* End background color */
 
 /* Font */
+.fw600 {
+    font-weight: 600 !important;
+}
 .ff1 {
     font-family: var(--head-font);
 }
 .ff2 {
     font-family: var(--body-font);
+}
+.fs18 {
+    font-size: 18px;
 }
 .fs14 {
     font-size: 14px;
@@ -101,12 +119,21 @@ h1, h2, h3, h4, h5, h6 {
 .pt40 {
     padding-top: 40px;
 }
+.pb40 {
+    padding-bottom: 40px;
+}
+.pt20 {
+    padding-top: 20px;
+}
 .pb20 {
     padding-bottom: 20px;
 }
 /* End padding */
 
 /* Margin */
+.mb150 {
+    margin-bottom: 150px;
+}
 .mt40 {
     margin-top: 40px;
 }
@@ -144,7 +171,19 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0;
     border: none;
 }
+.button__transparan {
+    background-color: transparent !important;
+}
 /* End button */
+
+/* Border */
+.bd__radius__none {
+    border-radius: 0 !important;
+}
+.bdb {
+    border-bottom: 1px solid lightgray;
+}
+/* End border */
 
 
 /* Tabel */
@@ -164,6 +203,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* End main style */
 
+/* *********************************** */
+/*                INDEX                */
+/* *********************************** */
 /* Navbar */
 .navbar .navbar-brand h4 {
     display: none;
@@ -237,12 +279,131 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     border: 1px solid white;
 }
+.line2 {
+    width: 100%;
+    border-bottom: 1px solid var(--dark-blue);
+
+}
 .footer__section .kotak__saran button:hover {
     background-color: lightgray !important;
 }
 /* End footer */
-/* End custom style */
 
+/* *********************************** */
+/*              TENTANG                */
+/* *********************************** */
+/* Tentang */
+.visi__section, .geografis__section h4 {
+    line-height: 1.5rem;
+}
+/* End tentang */
+
+/* Visi section */
+.visi__section .nomor {
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+.visi__section .deskripsi h4 {
+    line-height: 1.5rem;
+}
+.line2 {
+    width: 100%;
+    height: 1.5px;
+    background-color: lightgray;
+}
+/* End visi section */
+
+/* Struktur organisasi */
+.organisasi__section .content {
+    padding: .7rem 1.5rem;
+    border: 0.5px solid lightgray;
+}
+.organisasi__section .deskripsi {
+    margin-left: 2.3rem;
+}
+.organisasi__section i {
+    transition: var(--main-trans);
+}
+/* End struktur organisasi */
+
+/* *********************************** */
+/*           SEKOLAH DASAR             */
+/* *********************************** */
+/* Dropdown */
+.dropdown__section button {
+    border-radius: 0;
+    background-color: white !important;
+    color: var(--grey) !important;
+}
+.dropdown-menu {
+    min-width: 13.8rem !important;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+/* End dropdown */
+
+/* Ajax tab */
+.ajax__section {
+    border-color: #6c757d !important;
+}
+.ajax__section .active {
+    border-color: #6c757d !important;
+    border-bottom: none !important;
+    color: var(--grey) !important;
+}
+.ajax__section button {
+    color: var(--blue);
+    border-radius: 0 !important;
+    /* border-color: #6c757d !important; */
+}
+/* End ajax tab */
+
+/* Tabel */
+.tabel__section {
+    border: 1px solid #6c757d;
+}
+.tabel__section th {
+    font-weight: 600 !important;
+}
+.tabel__section th, td {
+    font-size: 16px;
+    color: var(--grey);
+}
+.tabel__section .jabatan {
+    padding-right: 20rem;
+}
+/* End Tabel */
+
+/* *********************************** */
+/*     SEKOLAH MENENGAH PERTAMA        */
+/* *********************************** */
+
+/* *********************************** */
+/*           DETAIL SEKOLAH            */
+/* *********************************** */
+.detail__section .detail__content {
+    border-bottom: 1px solid lightgrey;
+}
+.detail__content .col-1 {
+    width: 0.333333% !important;
+}
+
+/* *********************************** */
+/*             KOTAK SARAN             */
+/* *********************************** */
+.saran__section input {
+    font-size: 14px;
+}
+.saran__section textarea {
+    border-radius: 0 !important;
+    min-height: 7rem;
+    color: var(--grey) !important;
+}
+.saran__section .modal__pesan {
+    min-height: 5rem;
+}
 
 /* Responsive */
 /* Lg */

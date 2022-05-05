@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
     <!-- Bootstrap Icon -->
     <link
       rel="stylesheet"
@@ -28,16 +27,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Open Sans Font -->
+    <!-- Custom Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
 
-    <!--  -->
-    <title>Profil Pendidikan | Detail Sekolah</title>
+    <title>Profil Pendidikan | Beranda</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -67,7 +65,7 @@
         >
           <ul class="navbar-nav align-items-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
+              <a class="nav-link active" aria-current="page" href="index.html"
                 >Beranda</a
               >
             </li>
@@ -76,7 +74,7 @@
             </li>
             <li class="nav-item dropdown dropdown__section">
               <a
-                class="nav-link dropdown-toggle active"
+                class="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -108,102 +106,140 @@
     </nav>
     <!-- End navbar -->
 
-    <!-- Main -->
-    <div class="px">
+    <!-- Main page -->
+    <div class="px saran__section">
       <div class="container">
-        <div class="d-flex align-items-baseline">
-          <a href="data-sekolah-dasar.html" class="text-decoration-none"
-            >Data Sekolah</a
-          >
-          <h4 class="grey mx-2">/</h4>
-          <a href="" class="grey text-decoration-none">Detail Sekolah</a>
-        </div>
-        <h2 class="fw-bold darkblue mt10">Detail Sekolah</h2>
-        <div class="detail__section mt20">
-          <div class="row">
-            <div class="col-lg-6 col-12">
-              <img
-                src="./img/Contoh-Foto-Depan-Sekolah.png"
-                width="100%"
-                alt=""
-              />
-            </div>
-            <div class="col-lg-6 col-12 mt10 mt-lg-0">
-              <div class="detail__content pb-2">
-                <div class="row">
-                  <div class="col-4">
-                    <h3>Nama</h3>
-                  </div>
-                  <div class="col-1"><h3>:</h3></div>
-                  <div class="col-7">
-                    <h3>SD N Kaliboyo 01</h3>
-                  </div>
+        <h2 class="fw-bold darkblue">Kotak Saran</h2>
+        <h3 class="mt10 grey">
+          Berikan saran dan masukan Anda untuk website yang lebih baik
+        </h3>
+        <form>
+          <div class="saran__content mt40">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="">
+                  <label for="namalengkap" class="form-label grey"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control grey"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Masukkan nama lengkap"
+                  />
+                </div>
+                <div class="mt10">
+                  <label for="email" class="form-label grey">Email</label>
+                  <input
+                    type="email"
+                    class="form-control grey"
+                    id="email"
+                    placeholder="Masukkan email"
+                  />
                 </div>
               </div>
-              <div class="detail__content pb-2 mt-3">
-                <div class="row">
-                  <div class="col-4">
-                    <h3>NPSN</h3>
-                  </div>
-                  <div class="col-1"><h3>:</h3></div>
-                  <div class="col-7">
-                    <h3>24060119120039</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="detail__content pb-2 mt-3">
-                <div class="row">
-                  <div class="col-4">
-                    <h3>Akreditasi</h3>
-                  </div>
-                  <div class="col-1"><h3>:</h3></div>
-                  <div class="col-7">
-                    <h3>A</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="detail__content pb-2 mt-3">
-                <div class="row">
-                  <div class="col-4">
-                    <h3>Kontak</h3>
-                  </div>
-                  <div class="col-1"><h3>:</h3></div>
-                  <div class="col-7">
-                    <h3>085329999577</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="detail__content pb-2 mt-3">
-                <div class="row">
-                  <div class="col-4">
-                    <h3>Alamat</h3>
-                  </div>
-                  <div class="col-1"><h3>:</h3></div>
-                  <div class="col-7">
-                    <h3>
-                      Jl. Raya Kaliboyo, Kaliboyo, Kec. Tulis, Kab. Batang Prov.
-                      Jawa Tengah
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="detail__content pb-2 mt-3">
-                <div class="row">
-                  <div class="col-4">
-                    <h3>Titik Koordinat</h3>
-                  </div>
-                  <div class="col-1"><h3>:</h3></div>
-                  <div class="col-7">
-                    <h3>6º LU - 11º LS dan 95º BT - 141º BT</h3>
+              <div class="col-md-6 mt-md-0 mt10 col-12">
+                <div class="">
+                  <label for="pesan" class="form-label grey">Pesan</label>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control p-2 grey"
+                      placeholder="Masukkan saran dan pesan"
+                      id="pesan"
+                    ></textarea>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <div class="d-flex justify-content-end mt20">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn button bgblue text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Kirim
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title fw-bold" id="exampleModalLabel">
+                      Konfirmasi
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">Yakin ingin mengirim pesan?</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-danger bd__radius__none"
+                      data-bs-dismiss="modal"
+                    >
+                      Batal
+                    </button>
+                    <button
+                      type="button"
+                      class="btn button text-white bgblue"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal2"
+                      data-bs-dismiss="modal"
+                    >
+                      Kirim
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal succes -->
+            <div
+              class="modal fade"
+              id="exampleModal2"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header alert alert-success">
+                    <h3 class="modal-title fw-bold" id="exampleModalLabel">
+                      Sukses
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body modal__pesan">
+                    Pesan terkirim! Terima kasih atas saran dan masukan Anda.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-    <!-- End main -->
+    <!-- End main page -->
 
     <!-- Footer -->
     <footer class="mt40 bgdarkblue footer__section">
@@ -217,7 +253,7 @@
               </h4>
             </div>
             <div class="col-12 text-center col-md-8 text-md-end">
-              <h4 class="text-white ff2 fs14">
+              <h4 class="text-white ff2">
                 Profil pendidikan merupakan website yang berisi informasi
                 terkait pendidikan di Kabupaten Batang. Website ini merupakan
                 bagian resmi dari dinas pendidikan dan kebudayaan kabupaten
@@ -245,11 +281,24 @@
     </footer>
     <!-- End footer -->
 
-    <!-- Bootstrap Bundle with Popper -->
+    <!-- JavaScript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom JavaScript -->
+    <link rel="stylesheet" href="./js/main.js" />
+
+    <!-- PureCounter -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"
+      ;
+    ></script>
+    <script>
+      new PureCounter();
+    </script>
+    <!-- End purecounter -->
   </body>
 </html>
